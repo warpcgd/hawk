@@ -1,0 +1,23 @@
+{
+  "name": "hawk",
+  "version": "1.0.0",
+  "description": "性能检测",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warpcgd/hawk.git"
+  },
+  "keywords": [
+    "perfermence",
+    "test"
+  ],
+  "author": "lxc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/warpcgd/hawk/issues"
+  },
+  "homepage": "https://github.com/warpcgd/hawk#readme"
+}
