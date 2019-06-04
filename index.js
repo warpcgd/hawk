@@ -53,7 +53,7 @@ puppeteer.launch().then(async browser => {
   }
   page.removeListener('load', loadHandler)
   analyzer(performanceArr)
-  
+
   // 加载后的钩子函数
   async function loadHandler () {
     const performance = await page.evaluate(() => {
