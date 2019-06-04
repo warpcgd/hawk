@@ -121,10 +121,12 @@ function analyzer (data) {
   let totalDOMReadyTime = 0
   // onload时间
   let totalLoadTime = 0
+  // FMP时间
+  let totalFMP = 0
 
   for (let item of data) {
-    let total = JSON.parse(item)
-    // console.log(entries)
+    let { total}  = JSON.parse(item)
+    let { fmp } = JSON.parse(item)
     let {
       navigationStart,
       domainLookupStart,
@@ -150,6 +152,8 @@ function analyzer (data) {
     totalWhiteScreenTime += getWhiteScreenTime(navigationStart, domInteractive)
     totalDOMReadyTime += getDOMReadyTime(navigationStart, domContentLoadedEventEnd)
     totalLoadTime += getLoadTime(navigationStart, loadEventEnd)
+    totalFMP += fmp
+
   }
   console.log('DNS lookup time:', formatMSToHumanReadable(getAverage(totalDNSTime, length)))
   console.log('TCP connect time:', formatMSToHumanReadable(getAverage(totalTCPTime, length)))
@@ -167,6 +171,7 @@ function analyzer (data) {
   console.log('DOM Ready耗时:', formatMSToHumanReadable(getAverage(totalDOMReadyTime, length)))
   console.log('DOM Ready之后继续进行资源下载的耗时:', formatMSToHumanReadable(getAverage(totalAfterDOMReadyTheDownloadTimeOfTheRes, length)))
   console.log('Load时间:', formatMSToHumanReadable(getAverage(totalLoadTime, length)))
+  console.log('FMP:', formatMSToHumanReadable(getAverage(totalFMP, length)))
   console.log(`\n`)
 
   return {
@@ -178,7 +183,7 @@ function analyzer (data) {
       whiteScreenTime: formatMSToHumanReadable(getAverage(totalWhiteScreenTime, length)),
       DOMReadyTime: formatMSToHumanReadable(getAverage(totalDOMReadyTime, length)),
       afterDOMReadyDownloadTime: formatMSToHumanReadable(getAverage(totalAfterDOMReadyTheDownloadTimeOfTheRes, length)),
-      loadTime: formatMSToHumanReadable(getAverage(totalLoadTime, length))
+      loadTime: formatMSToHumanReadable(getAverage(totalFMP, length))
     }
   }
 }

@@ -58,8 +58,8 @@ puppeteer.launch().then(async browser => {
   async function loadHandler () {
     const performance = await page.evaluate(() => {
       let total = window.performance
-      let entries = total.getEntries()
-      return JSON.stringify(total)
+      let fmp = window.performance.now()
+      return JSON.stringify({total, fmp})
     })
     performanceArr.push(performance)
   }
