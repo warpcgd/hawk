@@ -4,7 +4,7 @@ const regUrl = /^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-.,@?^=%&:\/~+#]*[\w\-
 // 本地域名
 const serverHost = '127.0.0.1'
 // 本地端口
-const serverPort = 444
+const serverPort = 2333
 // 文件目录检测
 const fsStat = function fsExistsSync(path) {
   try {

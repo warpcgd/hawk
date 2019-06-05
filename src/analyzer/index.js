@@ -105,7 +105,7 @@ function analyzer(data) {
   }
 
   let length = data.length // 分析次数
-
+  console.log(length)
   // DNS查询耗时
   let totalDNSTime = 0
   // TCP链接耗时

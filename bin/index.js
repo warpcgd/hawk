@@ -20,10 +20,9 @@ let {
 } = opts
 let regUrlResult = regUrl.test(url)
 async function main () {
-  if (!regUrlResult || !fsStat(url)) {
+  if (!regUrlResult) {
     console.log('未检测到合法的域名, 继续检测是否为本地文件')
-  }
-  if (fsStat(url)) {
+  } else if (fsStat(url)) {
     console.log(`检测到${url}为本地文件`)
     console.log(`自动启动本地服务器`)
     let server = await createServer()
@@ -31,7 +30,7 @@ async function main () {
     let localPath = `http://${serverHost}:${serverPort}/${url}`
     console.log(`本地地址：${localPath}`)
     opts.url = localPath
-  } else {
+  } else if (!regUrlResult && !fsStat(url)) {
     console.log(`未检测到${url}为本地文件，程序自动关闭`)
     process.exit(1)
   }
