@@ -155,14 +155,14 @@ function analyzer (data) {
     totalFMP += fmp
 
   }
-  console.log('DNS lookup time:', formatMSToHumanReadable(getAverage(totalDNSTime, length)))
-  console.log('TCP connect time:', formatMSToHumanReadable(getAverage(totalTCPTime, length)))
-  console.log('TTFB:', formatMSToHumanReadable(getAverage(totalTTFBTime, length)))
-  console.log('Download time of the page:', formatMSToHumanReadable(getAverage(totalDownloadTime, length)))
-  console.log('After DOM Ready the download time of resources:', formatMSToHumanReadable(getAverage(totalAfterDOMReadyTheDownloadTimeOfTheRes, length)))
-  console.log('White screen time:', formatMSToHumanReadable(getAverage(totalWhiteScreenTime, length)))
-  console.log('DOM Ready time:', formatMSToHumanReadable(getAverage(totalDOMReadyTime, length)))
-  console.log('Load time:', formatMSToHumanReadable(getAverage(totalLoadTime, length)))
+  // console.log('DNS lookup time:', formatMSToHumanReadable(getAverage(totalDNSTime, length)))
+  // console.log('TCP connect time:', formatMSToHumanReadable(getAverage(totalTCPTime, length)))
+  // console.log('TTFB:', formatMSToHumanReadable(getAverage(totalTTFBTime, length)))
+  // console.log('Download time of the page:', formatMSToHumanReadable(getAverage(totalDownloadTime, length)))
+  // console.log('After DOM Ready the download time of resources:', formatMSToHumanReadable(getAverage(totalAfterDOMReadyTheDownloadTimeOfTheRes, length)))
+  // console.log('White screen time:', formatMSToHumanReadable(getAverage(totalWhiteScreenTime, length)))
+  // console.log('DOM Ready time:', formatMSToHumanReadable(getAverage(totalDOMReadyTime, length)))
+  // console.log('Load time:', formatMSToHumanReadable(getAverage(totalLoadTime, length)))
   console.log('DNS查询耗时：', formatMSToHumanReadable(getAverage(totalDNSTime, length)))
   console.log('TCP连接耗时:', formatMSToHumanReadable(getAverage(totalTCPTime, length)))
   console.log('TTFB:', formatMSToHumanReadable(getAverage(totalTTFBTime, length)))
@@ -173,19 +173,6 @@ function analyzer (data) {
   console.log('Load时间:', formatMSToHumanReadable(getAverage(totalLoadTime, length)))
   console.log('FMP:', formatMSToHumanReadable(getAverage(totalFMP, length)))
   console.log(`\n`)
-
-  return {
-    total: {
-      dnsTime: formatMSToHumanReadable(getAverage(totalDNSTime, length)),
-      tcpTime: formatMSToHumanReadable(getAverage(totalTCPTime, length)),
-      TTFB: formatMSToHumanReadable(getAverage(totalTTFBTime, length)),
-      pageDownloadTime: formatMSToHumanReadable(getAverage(totalDownloadTime, length)),
-      whiteScreenTime: formatMSToHumanReadable(getAverage(totalWhiteScreenTime, length)),
-      DOMReadyTime: formatMSToHumanReadable(getAverage(totalDOMReadyTime, length)),
-      afterDOMReadyDownloadTime: formatMSToHumanReadable(getAverage(totalAfterDOMReadyTheDownloadTimeOfTheRes, length)),
-      loadTime: formatMSToHumanReadable(getAverage(totalFMP, length))
-    }
-  }
 }
 
 module.exports = analyzer
