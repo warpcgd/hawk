@@ -1,6 +1,6 @@
 {
   "name": "hawk",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "性能检测",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/warpcgd/hawk.git"
+  },
+  "bin": {
+    "hawk": "./bin/index.js"
   },
   "keywords": [
     "perfermence",
@@ -21,7 +24,10 @@
   },
   "homepage": "https://github.com/warpcgd/hawk#readme",
   "dependencies": {
+    "cli-color": "^1.4.0",
+    "clui": "^0.3.6",
     "commander": "^2.20.0",
+    "figlet": "^1.2.3",
     "puppeteer": "^1.17.0"
   }
 }

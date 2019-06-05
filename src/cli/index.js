@@ -17,7 +17,7 @@ function monitor () {
     .command('verify <path>')
     .description('检测路径')
     .action((path) => {
-      console.log(`开始检测路径${path}`)
+      // console.log(`开始检测路径${path}`)
       url = path
     })
 
@@ -44,4 +44,4 @@ function monitor () {
   return opts
 }
 
-model.exports = monitor
+module.exports = monitor

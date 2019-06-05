@@ -1,7 +1,11 @@
 const puppeteer = require('puppeteer')
-function performance (opts) {
+async function performance (opts) {
+  const {
+    url,
+    number
+  } = opts
   console.log('初始化浏览器')
-  puppeteer.launch().then(async browser => {
+  return await puppeteer.launch().then(async browser => {
     console.log('浏览器初始化成功')
     const page = await browser.newPage()
     const performanceArr = [] // 多少次的数组
@@ -12,7 +16,6 @@ function performance (opts) {
       await page.goto(url)
     }
     page.removeListener('load', loadHandler)
-    let result = analyzer(performanceArr)
 
     // 加载后的钩子函数
     async function loadHandler() {
@@ -26,7 +29,7 @@ function performance (opts) {
       })
       performanceArr.push(performance)
     }
+    return performanceArr
   })
-  return result
 }
-model.exports = performance
+module.exports = performance
