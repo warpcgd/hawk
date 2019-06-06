@@ -12,7 +12,8 @@ async function performance (opts) {
     headless: true
   })
   let tab = await browser.newPage()
-  // await tab.setCacheEnabled(true)
+  // 去掉浏览器缓存
+  await tab.setCacheEnabled(false)
   tab.on('load', loadHandler)
   async function loadHandler () {
     const performance = await tab.evaluate(() => {
