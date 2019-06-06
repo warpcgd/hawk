@@ -1,0 +1,104 @@
+{
+  "resources": [
+    {
+      "file": "assets/css/chunk-vendors-fe89907038.chunk.css",
+      "length": 2846,
+      "hash": "063fa1a8ba9cc462890b1b5a27f73ea5"
+    },
+    {
+      "file": "assets/css/index-ffc574c40e.chunk.css",
+      "length": 10076,
+      "hash": "d42ce8dc9d4c94f806ad953c76ba80f0"
+    },
+    {
+      "file": "assets/data/axios.min.js",
+      "length": 12949,
+      "hash": "330bd8ed153eab093c80f9572ba9d407"
+    },
+    {
+      "file": "assets/data/polyfill.min.js",
+      "length": 3135,
+      "hash": "4d951d3c76da69552bc7e7e690607173"
+    },
+    {
+      "file": "assets/data/vue.min.js",
+      "length": 85921,
+      "hash": "26397b6bdf7178f10d3f77fb4be70090"
+    },
+    {
+      "file": "assets/js/0-29bc0d6208.chunk.js",
+      "length": 1188,
+      "hash": "7be88536259b9d43ee05de2efe78f61a"
+    },
+    {
+      "file": "assets/js/10-bb38499f7e.chunk.js",
+      "length": 4534,
+      "hash": "c05d23ff779bdd8f558b9240e751d226"
+    },
+    {
+      "file": "assets/js/11-ad5a2524c4.chunk.js",
+      "length": 4128,
+      "hash": "8645d63629e888aa3c083b9dc92fa8d2"
+    },
+    {
+      "file": "assets/js/12-87945678f7.chunk.js",
+      "length": 1883,
+      "hash": "92fa9e30d406f3c52b164393a90c55b9"
+    },
+    {
+      "file": "assets/js/13-95dcc7d704.chunk.js",
+      "length": 1665,
+      "hash": "f2c37902185907fc080f164d641628b1"
+    },
+    {
+      "file": "assets/js/4-5f647d5007.chunk.js",
+      "length": 3631,
+      "hash": "0eac62daaebabbd0493fad93b6a52eb2"
+    },
+    {
+      "file": "assets/js/5-09c9a5d927.chunk.js",
+      "length": 1272,
+      "hash": "fb91438cbebaf96c0106b34de224b6ce"
+    },
+    {
+      "file": "assets/js/6-22a0115d7d.chunk.js",
+      "length": 4204,
+      "hash": "b3c655f8da8b39ab64c6faaf2bf5c44a"
+    },
+    {
+      "file": "assets/js/7-e8ac839054.chunk.js",
+      "length": 1259,
+      "hash": "9f9e3953e97a4749dffc578802da9601"
+    },
+    {
+      "file": "assets/js/8-fb62ed388b.chunk.js",
+      "length": 1151,
+      "hash": "a63876356fbe46ec8a66fcea8a555e95"
+    },
+    {
+      "file": "assets/js/9-ba513e7ea2.chunk.js",
+      "length": 1314,
+      "hash": "269579ad27188284eaea1886896c4552"
+    },
+    {
+      "file": "assets/js/chunk-vendors-fe89907038.chunk.js",
+      "length": 51583,
+      "hash": "f9d1820d832ee2f8f01c554238153ecc"
+    },
+    {
+      "file": "assets/js/index-ffc574c40e.chunk.js",
+      "length": 18450,
+      "hash": "af4f260462beb7d4af00a0eebbf19fa8"
+    },
+    {
+      "file": "assets/js/runtime~index-f265301c41.js",
+      "length": 2409,
+      "hash": "b8b5a6963eb881400645b0cc3cfef683"
+    },
+    {
+      "file": "index.html",
+      "length": 5461,
+      "hash": "3b72ffc2f280bd0ace60e9abc0765524"
+    }
+  ]
+}
