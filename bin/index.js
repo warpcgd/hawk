@@ -39,7 +39,7 @@ async function main () {
     console.log(`未检测到${url}为本地文件，程序自动关闭`)
     process.exit(1)
   }
-  process.setMaxListeners(0)
+  process.setMaxListeners(999)
   // 执行perfomance
   performance(opts).then(async statisticData => {
     let data = await analyzer(statisticData)
